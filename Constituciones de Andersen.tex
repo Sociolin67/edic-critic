@@ -1,0 +1,508 @@
+\documentclass[a4paper,12pt,twoside]{book}
+
+% Paquetes necesarios
+\usepackage{fontspec}
+
+\usepackage[spanish,es-noquoting,es-noshorthands]{babel}
+\usepackage{geometry}
+\geometry{
+    headheight=14.49998pt,
+}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{lettrine}
+\usepackage{setspace}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{booktabs}
+\usepackage{epigraph}
+\usepackage{wrapfig}
+\usepackage{etoolbox}
+\usepackage{pifont}
+\usepackage{footnote}
+
+% Configuración de márgenes
+\geometry{
+  a4paper,
+  left=3cm,
+  right=2.5cm,
+  top=3cm,
+  bottom=3cm,
+  twoside,
+  bindingoffset=1cm
+}
+
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\interlinepenalty=100
+
+\usepackage{etoolbox}
+\patchcmd{\selectlanguage}{\languageattribute{}}{}
+
+% Fuentes
+\setmainfont{EB Garamond}
+
+% Configuración de estilo de página
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{Constituciones de Anderson}
+\fancyhead[LO]{Respetable Logia Simbólica Moriá 143}
+\fancyfoot[C]{}
+
+% Estilo de capítulos y secciones
+\titleformat{\chapter}[display]
+  {\normalfont\LARGE\bfseries\scshape\centering}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\Large\bfseries\scshape\centering}{}{0em}{}
+\titleformat{\subsection}
+  {\large\bfseries\itshape}{}{0em}{}
+
+% Configuración de espaciado
+\onehalfspacing
+\setlength{\parindent}{1em}
+
+% Colores
+\definecolor{dorado}{RGB}{184,134,11}
+\definecolor{borgoña}{RGB}{128,0,32}
+\definecolor{azulprofundo}{RGB}{0,35,102}
+
+\newcommand{\ConstitucionesAnderson}{\textit{Constituciones de Anderson}}
+
+% Título ornamentado
+\newcommand{\ornline}{%
+\begin{center}
+\textcolor{dorado}{{\LARGE\rule{0.2\textwidth}{0.4pt}}~\scalebox{1.2}{❧}~\scalebox{1.2}{❧}~\scalebox{1.2}{❧}~
+{\LARGE\rule{0.2\textwidth}{0.4pt}}}
+\end{center}}
+
+% Elementos decorativos
+\newcommand{\decoracion}{%
+\begin{center}
+\textcolor{dorado}{%
+\begin{tabular}{c}
+\Large{$\ast$ $\ast$ $\ast$} \\
+\rule{5cm}{0.4pt}
+\end{tabular}
+}
+\end{center}}
+
+% Formato especial para las secciones del manuscrito
+\newcommand{\manuscritosection}[1]{%
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+\makeatletter
+\addto\extrafspanish{\bbl@declare@tldash}
+\makeatother
+
+\begin{document}
+
+% Páginas preliminares
+\frontmatter
+
+% Portada
+\begin{titlepage}
+\begin{center}
+
+\vspace*{1.5cm}
+
+{\Huge\scshape\textcolor{borgoña}{Constituciones de Anderson}}
+
+\vspace{1cm}
+
+{\Large\scshape\textcolor{borgoña}{(1723)}}
+
+\vspace{1cm}
+
+{\Large\itshape El fundamento normativo\\de la masonería especulativa}
+
+\vspace{1cm}
+
+{\large\scshape Colección: Textos Tradicionales de la Masonería Operativa\\Nº 12}
+
+\vspace{1cm}
+
+\ornline
+
+\vspace{0.5cm}
+
+\includegraphics[width=0.7\textwidth]{anderson_frontispicio.jpg}
+
+\vspace{0.5cm}
+
+\ornline
+
+\vspace{1.5cm}
+
+{\large\scshape Edición especial}
+
+\vspace{0.5cm}
+
+{\Large\bfseries XX Aniversario de la R.·. L.·. S.·. Moriá 143}
+
+\vspace{1cm}
+
+{\Large\bfseries XV Años de Historia, Sabiduría y Fraternidad\\de la Gran Logia Provincial de Murcia}
+
+\vspace{1cm}
+
+{\normalsize\itshape Dado en los Valles de Murcia,\\a los 14 días del mes de Nisan del Año de la V.·. L.·. 6025}
+
+\vspace{0.5cm}
+
+{\normalsize\itshape 14 de abril del año MMXXV de la era vulgar}
+
+\end{center}
+\end{titlepage}
+
+
+% Página en blanco
+\thispagestyle{empty}
+\clearpage
+\null
+\thispagestyle{empty}
+\clearpage
+
+% Dedicatoria
+\thispagestyle{empty}
+\vspace*{5cm}
+\begin{flushright}
+\large
+\emph{A James Anderson y Jean Théophile Désaguliers,\\
+cuya visión y erudición establecieron los fundamentos\\
+sobre los que se construiría la masonería moderna,\\
+y a los primeros Grandes Maestres de la Gran Logia de Londres,\\
+quienes supieron transformar una antigua fraternidad de constructores\\
+en una institución universal dedicada al progreso moral de la humanidad.}
+\end{flushright}
+\clearpage
+
+% Prefacio
+\chapter*{\centering\scshape Prefacio}
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Prefacio}
+% Prefacio
+\chapter*{\centering\scshape Prefacio}
+\thispagestyle{empty}
+\addcontentsline{toc}{chapter}{Prefacio}
+\lettrine[lines=3, lhang=0.1, loversize=0.1]{\textcolor{dorado}{L}}{a} Respetable Logia Simbólica Moriá 143 se complace en presentar este duodécimo volumen de la colección de Textos Tradicionales de la Masonería Operativa, dedicado a las \textit{Constituciones de Anderson} de 1723. Este documento marca un hito fundamental en la historia de la masonería, pues establece las bases normativas y filosóficas de la masonería especulativa moderna, creando un puente entre las tradiciones operativas de siglos anteriores y la institución universal que conocemos hoy.
+
+Las \textit{Constituciones de Anderson} representan el momento decisivo en que la masonería, hasta entonces predominantemente vinculada al oficio de la construcción, redefine su propósito y amplía su horizonte, transformándose en una fraternidad dedicada al perfeccionamiento moral e intelectual de sus miembros y al fomento de la fraternidad universal. Este punto de inflexión, ocurrido en el Londres de principios del siglo XVIII, establecería las bases para la expansión global de la Orden.
+
+Tras haber explorado en volúmenes anteriores los principales documentos de la tradición masónica operativa —desde los antiguos manuscritos medievales como el Regius y el Cooke hasta los Estatutos Schaw y el Manuscrito de Edimburgo—, abordamos ahora el texto que serviría como puente entre dos épocas. La particularidad de las \textit{Constituciones de Anderson} radica precisamente en su carácter transicional: por un lado, conserva y reinterpreta elementos de la tradición operativa; por otro, introduce nuevos principios adaptados a las circunstancias sociales, religiosas y políticas de la Inglaterra post-Revolución Gloriosa.
+
+El documento, concebido originalmente como un reglamento para la recién formada Gran Logia de Londres, presentaba una síntesis entre tradición e innovación. Comenzaba con una historia legendaria de la masonería desde Adán hasta la época contemporánea, para luego exponer los deberes u obligaciones fundamentales del masón, y concluir con las regulaciones administrativas de la naciente institución. Su importancia histórica no debe buscarse tanto en su precisión historiográfica —hoy sabemos que su narrativa histórica contiene numerosos elementos legendarios— sino en su intento de dotar a la masonería de una base doctrinal coherente y adaptada a los tiempos.
+
+Especial atención merece el primer deber, referente a "Dios y la Religión", donde se formula el principio de que los masones sólo están obligados a profesar "aquella religión que todo hombre acepta", estableciendo así una postura de tolerancia religiosa inusual para su época. Esta apertura intelectual, junto con su insistencia en el mérito personal como único criterio de preferencia entre los masones, sitúan a las \textit{Constituciones} como un documento precursor de ideales que ganarían prominencia durante la Ilustración.
+
+Para esta edición, hemos realizado una cuidadosa traducción y análisis del texto original inglés, enriqueciendo la presentación con un aparato crítico que contextualiza históricamente el documento y explora sus implicaciones filosóficas, religiosas y políticas. Hemos prestado especial atención a la comparación entre las dos ediciones andersonianas (1723 y 1738), señalando las modificaciones que reflejan tanto la evolución interna de la Orden como las cambiantes circunstancias externas.
+
+Con la publicación de este volumen, la Respetable Logia Simbólica Moriá 143 continúa su compromiso con la difusión del patrimonio documental masónico, convencida de que el estudio riguroso de nuestros textos fundacionales es esencial para comprender la riqueza y profundidad de nuestra tradición. Las \textit{Constituciones de Anderson}, en su condición de texto fundacional de la masonería moderna, nos invitan a reflexionar sobre el equilibrio entre tradición e innovación, y sobre la capacidad de nuestra Orden para adaptarse a los cambios sin perder su esencia fundamental.
+
+\vspace{1cm}
+\begin{flushright}
+\textit{El Venerable Maestro}\\
+Respetable Logia Simbólica Moriá 143\\
+Oriente de España, Valles de Murcia, 2025
+\end{flushright}
+
+\clearpage
+
+% Tabla de contenidos
+\tableofcontents
+\clearpage
+
+% Texto principal
+\mainmatter
+
+\chapter{Introducción Histórica}
+
+\ornline
+\vspace{1cm}
+
+\lettrine[lines=3, lhang=0.1, loversize=0.1]{\textcolor{borgoña}{L}}{as} \textit{Constituciones de Anderson} representan un momento decisivo en la historia de la masonería. Publicadas en 1723, constituyen el primer documento normativo de la masonería especulativa moderna y marcan la transición desde una antigua fraternidad de constructores hacia una organización filosófica y especulativa con alcance universal. Este documento, cuyo título original era \textit{The Constitutions of the Free-Masons: Containing the History, Charges, Regulations, \&c. of that most Ancient and Right Worshipful Fraternity}, fue redactado por el pastor presbiteriano escocés James Anderson, por encargo de la recientemente formada Gran Logia de Londres (1717), y ofrece el marco fundacional sobre el que se desarrollaría posteriormente la masonería en todo el mundo.
+
+Su importancia va mucho más allá de su valor como documento regulador interno. En sus páginas encontramos una visión de la sociedad y del individuo que, en muchos aspectos, anticipaba los ideales de la Ilustración: tolerancia religiosa, fraternidad universal, valoración del mérito personal sobre el nacimiento, y un compromiso con la armonía social bajo principios éticos compartidos. Este conjunto de valores, articulados en un momento histórico de profundas transformaciones sociales, políticas y culturales, convertiría a la masonería en un referente intelectual de primer orden durante los siguientes siglos.
+
+\section{El contexto histórico y social de Inglaterra a principios del siglo XVIII}
+
+Para comprender adecuadamente el significado y el alcance de las \textit{Constituciones de Anderson}, es necesario situarlas en el complejo entramado histórico de la Inglaterra de principios del siglo XVIII, un período de profundas transformaciones que afectaban a todas las esferas de la vida social.
+
+Políticamente, Inglaterra acababa de experimentar dos revoluciones que habían transformado radicalmente su estructura de poder. La primera, la Revolución Gloriosa de 1688, había depuesto al rey Jacobo II, último monarca de la Casa Estuardo, y había entronizado a Guillermo de Orange (Guillermo III) y María II, estableciendo una monarquía constitucional limitada por el Parlamento. La segunda, menos dramática pero igualmente significativa, fue la sucesión hannoveriana de 1714, que llevó al trono a Jorge I, primer monarca de la Casa de Hannover, asegurando la continuidad protestante en el trono inglés\footnote{Black, J. (2001). \textit{Eighteenth-Century Britain, 1688-1783}. Londres: Palgrave, p. 45.}.
+
+Esta doble transición política había consolidado un orden constitucional que garantizaba ciertas libertades civiles y religiosas, pero también había generado tensiones y divisiones. Los partidarios de los depuestos Estuardo, conocidos como jacobitas, mantenían todavía esperanzas de restauración, especialmente en Escocia, mientras que el nuevo orden whig-hannoveriano buscaba consolidar su legitimidad. La masonería, como señala Stevenson, no fue ajena a estas tensiones: "Las logias masónicas inglesas se convirtieron en espacios donde estas divisiones políticas podían trascenderse en nombre de la armonía fraternal, aunque no sin ciertas ambigüedades y tensiones internas"\footnote{Stevenson, D. (1988). \textit{The Origins of Freemasonry: Scotland's Century, 1590-1710}. Cambridge: Cambridge University Press, p. 213.}.
+
+En el ámbito religioso, Inglaterra había experimentado un largo siglo de conflictos y controversias. Las guerras civiles del siglo XVII habían tenido un fuerte componente religioso, y la tensión entre anglicanos, católicos y disidentes protestantes seguía siendo palpable. La Ley de Tolerancia de 1689 había establecido cierta libertad religiosa para los protestantes disidentes, aunque con limitaciones significativas, mientras que los católicos seguían sufriendo discriminación legal. En este contexto, la fórmula religiosa adoptada por las \textit{Constituciones} —que propugnaba una "religión en que todos los hombres están de acuerdo"— adquiere especial relevancia como intento de trascender las divisiones confesionales\footnote{Berman, R. (2012). \textit{The Foundations of Modern Freemasonry}. Brighton: Sussex Academic Press, p. 89.}.
+
+Intelectualmente, Inglaterra estaba experimentando los primeros efectos de lo que llegaría a conocerse como la Ilustración. El legado de Newton y Locke había establecido nuevos paradigmas en la comprensión del universo y de la sociedad. La Royal Society, fundada en 1660, había institucionalizado el método experimental y el empirismo como aproximaciones al conocimiento, mientras que los cafés londinenses se habían convertido en espacios de debate intelectual. Como señala Margaret Jacob: "La masonería inglesa emergió en este contexto como una institución que encarnaba muchas de las aspiraciones intelectuales de la temprana Ilustración: racionalidad, sociabilidad ordenada, fraternidad cosmopolita y un deísmo compatible con diversas tradiciones religiosas"\footnote{Jacob, M. C. (2006). \textit{The Origins of Freemasonry: Facts and Fictions}. Filadelfia: University of Pennsylvania Press, p. 23.}.
+
+Socialmente, Londres experimentaba una acelerada transformación. La capital inglesa, con casi 700.000 habitantes hacia 1720, era la mayor ciudad de Europa y un centro cosmopolita donde convergían personas de diversos orígenes y clases sociales. La creciente clase media, compuesta por comerciantes, profesionales y artesanos prósperos, buscaba espacios de sociabilidad que trascendieran las rígidas jerarquías tradicionales. Los cafés, los clubes y las sociedades como la masonería ofrecían precisamente estos espacios\footnote{Porter, R. (2000). \textit{London: A Social History}. Cambridge: Harvard University Press, p. 131.}.
+
+En el ámbito arquitectónico, que tan directamente concierne a la tradición masónica, la Londres de principios del siglo XVIII estaba aún marcada por el Gran Incendio de 1666 y la subsiguiente reconstrucción. Sir Christopher Wren, mencionado en las \textit{Constituciones} como un ilustre masón (aunque esta afirmación ha sido cuestionada por investigaciones recientes), había dirigido la reconstrucción de la ciudad según principios clásicos, y su obra maestra, la Catedral de San Pablo, se había completado en 1711. Este renacimiento del estilo clásico o "estilo augustiano", como lo llama Anderson, sería especialmente significativo para la masonería, que veía en la arquitectura clásica una expresión del orden cósmico y la razón universal\footnote{Curl, J. S. (2011). \textit{Freemasonry & the Enlightenment}. Londres: Historical Publications, p. 76.}.
+
+Finalmente, en el ámbito económico, Inglaterra experimentaba una primera fase de lo que llegaría a ser la Revolución Industrial. El comercio colonial se expandía, emergían nuevas formas de organización financiera (la Bolsa de Londres, el Banco de Inglaterra), y se intensificaba la especialización laboral. Los antiguos gremios medievales, incluidos los de los masones operativos, estaban en declive frente a estas nuevas realidades económicas, lo que en parte explica su transformación hacia formas más especulativas\footnote{Hamill, J. (1986). \textit{The Craft: A History of English Freemasonry}. Londres: Crucible, p. 38.}.
+
+Este complejo entramado de transformaciones políticas, religiosas, intelectuales, sociales y económicas constituye el escenario en el que surgieron las \textit{Constituciones de Anderson}, y explica en gran medida tanto su contenido como su posterior influencia.
+
+\section{La formación de la Gran Logia de Londres}
+
+El acontecimiento que precipitó la redacción de las \textit{Constituciones} fue la formación, en 1717, de la primera Gran Logia de la historia masónica, un evento que tradicionalmente se ha considerado como el momento fundacional de la masonería especulativa moderna. Según la narrativa tradicional, preservada en la segunda edición de las propias \textit{Constituciones} (1738), esta Gran Logia se formó cuando cuatro logias londinenses decidieron unirse bajo una autoridad central:
+
+"El Día de San Juan Bautista, en el tercer año del reinado de Jorge I, Anno Domini 1717, la Asamblea y Fiesta Anual de los Masones Libres y Aceptados se celebró en la taberna Goose and Gridiron en St. Paul's Church-yard, Londres; cuando la mayoría de los masones más ancianos y de mayor rango, con los Maestros y Vigilantes de las logias, encontrándose pocos masones por debajo del grado de Maestro Masón, se constituyeron a sí mismos en Gran Logia pro tempore en debida forma"\footnote{Anderson, J. (1738). \textit{The New Book of Constitutions of the Antient and Honourable Fraternity of Free and Accepted Masons}. Londres: J. Robinson, p. 109.}.
+
+Las cuatro logias fundadoras, identificadas por las tabernas donde se reunían, eran: 
+1. La que se reunía en la taberna "Goose and Gridiron" en St. Paul's Church-yard
+2. La que se reunía en la taberna "Crown" en Parker's Lane
+3. La que se reunía en la taberna "Apple-Tree" en Charles Street, Covent Garden
+4. La que se reunía en la taberna "Rummer and Grapes" en Channel Row, Westminster
+
+Estas logias eligieron como primer Gran Maestro a Anthony Sayer, "caballero", cargo que posteriormente ocuparían George Payne (1718-1719), Jean Théophile Désaguliers (1719-1720), nuevamente George Payne (1720-1721), y finalmente John, duque de Montagu (1721-1722), primer Gran Maestro de origen aristocrático, bajo cuyo mandato se publicarían las \textit{Constituciones}\footnote{Prescott, A. (2003). "The Early Grand Lodge in London: 1717-1723". En CRFF Working Paper Series, Universidad de Sheffield, 2003/1, p. 7.}.
+
+Sin embargo, esta narrativa tradicional ha sido cuestionada y matizada por investigaciones históricas recientes. Como señala Andrew Prescott: "No existe evidencia contemporánea directa de la reunión de 1717. El relato de Anderson en 1738 es la primera mención escrita del evento, y contiene inconsistencias y elementos dudosos que sugieren cierta reelaboración posterior de los hechos"\footnote{Prescott, A. (2003). "The Early Grand Lodge in London: 1717-1723". En CRFF Working Paper Series, Universidad de Sheffield, 2003/1, p. 5.}.
+
+Otros historiadores han sugerido que la formación de la Gran Logia pudo responder a motivaciones políticas vinculadas al establecimiento de la dinastía hannoveriana y a la necesidad de asegurar la lealtad de los masones a la nueva dinastía, en un momento en que las logias podían servir como refugio para simpatizantes jacobitas. En palabras de Margaret Jacob: "La creación de la Gran Logia y su posterior evolución no pueden entenderse al margen del contexto político de la Inglaterra post-Revolución Gloriosa, marcado por la tensión entre whigs y tories, y por el temor a la restauración Estuardo"\footnote{Jacob, M. C. (2006). \textit{The Origins of Freemasonry: Facts and Fictions}. Filadelfia: University of Pennsylvania Press, p. 87.}.
+
+Sea cual fuere la exacta motivación inicial, lo cierto es que la Gran Logia de Londres, en sus primeros años, fue consolidando gradualmente su autoridad. En 1721, bajo la Gran Maestría de George Payne, se recopilaron las "Antiguas Regulaciones" a partir de documentos masónicos preexistentes, que servirían como base para la parte normativa de las \textit{Constituciones}. El mismo año, la elección como Gran Maestro del duque de Montagu, miembro de la alta aristocracia y de la Royal Society, otorgó un nuevo prestigio a la institución\footnote{Berman, R. (2012). \textit{The Foundations of Modern Freemasonry}. Brighton: Sussex Academic Press, p. 112.}.
+
+Fue precisamente el duque de Montagu quien, en 1721, encargó a James Anderson la redacción de un nuevo libro de Constituciones que compilara y actualizara los antiguos documentos masónicos. Este encargo marcaría el inicio del proceso que culminaría, en 1723, con la publicación del documento que nos ocupa.
+
+\section{James Anderson y Jean Théophile Désaguliers}
+
+Los dos principales artífices de las \textit{Constituciones} fueron James Anderson, quien les dio forma y redacción final, y Jean Théophile Désaguliers, quien supervisó el trabajo y escribió la dedicatoria de la obra. Ambas figuras merecen especial atención por su papel en la formación de la masonería especulativa moderna.
+
+James Anderson (c. 1679-1739) era un pastor presbiteriano escocés, nacido en Aberdeen y establecido en Londres desde aproximadamente 1710, donde dirigía una capilla presbiteriana en Swallow Street, Piccadilly. Su conexión con la masonería probablemente venía de familia, pues su padre, también llamado James Anderson, había sido secretario de la logia de Aberdeen, una de las más antiguas de Escocia\footnote{Stevenson, D. (1988). \textit{The Origins of Freemasonry: Scotland's Century, 1590-1710}. Cambridge: Cambridge University Press, p. 167.}.
+
+Anderson era un hombre erudito, con formación teológica y conocimientos de historia eclesiástica. Además de las \textit{Constituciones}, publicó otras obras, incluyendo sermones y tratados teológicos como \textit{Unity in Trinity, and Trinity in Unity} (1733), dedicado a la defensa de la doctrina trinitaria, y una obra de historia titulada \textit{Royal Genealogies} (1732).
+
+Su pensamiento teológico se inscribe en la tradición presbiteriana moderada, abierta a ciertas ideas de la Ilustración pero firmemente anclada en la ortodoxia cristiana. Esta posición intermedia entre la tradición y la modernidad se refleja también en las \textit{Constituciones}, donde Anderson intenta conciliar la narrativa bíblica tradicional con una visión más universalista de la religión\footnote{Curl, J. S. (2011). \textit{Freemasonry & the Enlightenment}. Londres: Historical Publications, p. 93.}.
+
+Jean Théophile Désaguliers (1683-1744), por su parte, representaba de manera más directa el espíritu científico de la Ilustración temprana. Nacido en Francia en el seno de una familia protestante hugonote, tuvo que emigrar a Inglaterra tras la revocación del Edicto de Nantes. Se educó en Oxford, donde se doctoró en Derecho Canónico, y desarrolló una notable carrera científica.
+
+Désaguliers fue asistente y divulgador de Isaac Newton, miembro de la Royal Society desde 1714 (de la que llegaría a ser Secretario), y autor de importantes trabajos científicos como \textit{A Course of Experimental Philosophy} (1734). Como masón, alcanzó la dignidad de Gran Maestro en 1719, y siguió siendo una figura influyente en los años posteriores\footnote{Berman, R. (2012). \textit{The Foundations of Modern Freemasonry}. Brighton: Sussex Academic Press, p. 98.}.
+
+La colaboración entre Anderson y Désaguliers en la redacción de las \textit{Constituciones} representaba, en cierto modo, la convergencia de dos tradiciones: la erudición teológica presbiteriana de Anderson, con sus vínculos con la masonería escocesa operativa, y el racionalismo científico newtoniano de Désaguliers, más orientado hacia una visión ilustrada y universalista. Esta complementariedad explicaría la peculiar síntesis que encontramos en el documento: una narrativa histórica tradicional combinada con principios éticos de marcado carácter universalista y racional\footnote{Jacob, M. C. (2006). \textit{The Origins of Freemasonry: Facts and Fictions}. Filadelfia: University of Pennsylvania Press, p. 65.}.
+
+\section{El proceso de redacción y aprobación de las \textit{Constituciones}}
+
+El proceso de redacción de las \textit{Constituciones} se extendió durante aproximadamente dos años, desde el encargo inicial en 1721 hasta su publicación en febrero de 1723. Según el propio Anderson en su "Aprobación" al final del texto, el Gran Maestro, el duque de Montagu, "encargó al autor examinar, corregir y compilar en nuevo y mejor método la Historia, Deberes y Reglas de la antigua Fraternidad".
+
+Para esta tarea, Anderson consultó diversos documentos masónicos preexistentes. El más importante fue sin duda la compilación de "Antiguas Regulaciones" realizada por George Payne durante su segundo periodo como Gran Maestro (1720-1721). Estas Regulaciones, según el propio Anderson, fueron "cotejadas con los antiguos documentos e inmemoriales usos de la Fraternidad".
+
+Además, Anderson afirma haber examinado "varios ejemplares de Italia y Escocia, y diversos documentos de Inglaterra", así como otros "documentos masónicos". Entre estos documentos estarían probablemente algunos de los llamados "Antiguos Deberes" (\textit{Old Charges}), manuscritos medievales y renacentistas que contenían la historia legendaria del oficio, obligaciones morales y regulaciones prácticas. Ejemplares conocidos de estos "Antiguos Deberes" incluían el Poema Regius (c. 1390), el Manuscrito Cooke (c. 1410), y numerosos manuscritos de los siglos XVI y XVII\footnote{Knoop, D., Jones, G.P., \& Hamer, D. (1978). \textit{The Early Masonic Catechisms}. Londres: Quatuor Coronati Lodge, p. 42.}.
+
+Anderson también habría tenido acceso, a través de su padre, a documentos de la masonería escocesa, que en el siglo XVII había evolucionado de manera distinta a la inglesa, manteniendo una más clara continuidad entre las formas operativas y especulativas. Los Estatutos Schaw (1598-1599), que regulaban la masonería operativa escocesa, y el Manuscrito de Edimburgo (1696), primer catecismo masónico conocido, habrían sido referencias importantes\footnote{Stevenson, D. (1988). \textit{The Origins of Freemasonry: Scotland's Century, 1590-1710}. Cambridge: Cambridge University Press, p. 189.}.
+
+Una vez completado el manuscrito, Anderson lo presentó a la Gran Logia "en la Asamblea del equinoccio de otoño (23 de septiembre de 1721)", donde se nombró una comisión de 14 "hermanos eruditos" para su revisión. Esta comisión, según Anderson, "aconsejó su aprobación con algunas pequeñas modificaciones" en la "Asamblea del equinoccio de primavera (25 de marzo de 1722)".
+
+Finalmente, en 1723, bajo la Gran Maestría del duque de Wharton, se publicaron las \textit{Constituciones} definitivas. La obra, impresa por William Hunter para los libreros John Senex y John Hooke, incluía la aprobación formal del Gran Maestro, del Diputado Gran Maestro (Désaguliers) y de los Grandes Vigilantes, así como de los Venerables Maestros y Vigilantes de veinte logias particulares.
+
+Sin embargo, este relato oficial del proceso, proporcionado por el propio Anderson, ha sido cuestionado por investigaciones recientes. Como señala Andrew Prescott: "Existen indicios de que el proceso fue más controvertido de lo que Anderson sugiere, y que su manuscrito original sufrió modificaciones significativas para ajustarse a las expectativas de la Gran Logia, particularmente en lo referente a la formulación de las obligaciones religiosas"\footnote{Prescott, A. (2003). "The Early Grand Lodge in London: 1717-1723". En CRFF Working Paper Series, Universidad de Sheffield, 2003/1, p. 9.}.
+
+Sea como fuere, lo cierto es que las \textit{Constituciones} se convirtieron rápidamente en el documento normativo de referencia para la masonería inglesa, y pronto comenzaron a ser traducidas y adaptadas en otros países, iniciando así su influencia global.
+
+\section{Estructura y contenido general de las \textit{Constituciones}}
+
+Las \textit{Constituciones de Anderson} se estructuran en cuatro partes claramente diferenciadas, cada una con su propio estilo, propósito y significado:
+
+La primera parte, titulada "Historia", ofrece una narrativa legendaria sobre los orígenes y desarrollo de la masonería desde tiempos bíblicos hasta principios del siglo XVIII. Comenzando con Adán, a quien Anderson atribuye un conocimiento innato de la geometría "impresa en su corazón", el relato recorre las principales civilizaciones de la antigüedad (babilónica, egipcia, hebrea, griega, romana), destacando su contribución a la arquitectura y a la "noble ciencia" de la geometría. Particular atención recibe el relato bíblico de la construcción del Templo de Salomón, presentado como momento culminante de la arquitectura antigua y modelo para toda la masonería posterior.
+
+La narrativa continúa a través de la Edad Media, mencionando a diversos reyes y nobles que habrían sido protectores y practicantes del "Arte Real", y concluye con un elogio de la arquitectura clásica y sus modernos restauradores, especialmente Iñigo Jones en Inglaterra. Esta sección histórica, aunque hoy sabemos que contiene numerosas inexactitudes y elementos puramente legendarios, cumplía una importante función legitimadora, vinculando la moderna institución especulativa con una venerable tradición que se remontaba a los albores de la civilización\footnote{Berman, R. (2012). \textit{The Foundations of Modern Freemasonry}. Brighton: Sussex Academic Press, p. 133.}.
+
+La segunda parte, titulada "Los Deberes de un Francmasón", constituye el núcleo doctrinal del documento. Extraídos supuestamente de "antiguos documentos de Logias del Continente y de las de Inglaterra, Escocia e Irlanda", estos deberes se organizan en seis secciones:
+
+1. De Dios y la Religión
+2. Del Jefe del Estado y sus subordinados
+3. De las Logias
+4. De los Maestros, Vigilantes, Compañeros y Aprendices
+5. De los trabajos del Taller
+6. De la conducta (subdividida en seis contextos diferentes)
+
+De estos deberes, el primero ha sido históricamente el más comentado y controvertido, por su formulación del principio de que los masones sólo están obligados a profesar "aquella religión que todo hombre acepta, dejando a cada uno libre en sus individuales opiniones". Esta formulación, que algunos han interpretado como expresión de deísmo y otros como simple tolerancia cristiana, representaba en cualquier caso una postura inusualmente abierta para la época en materia religiosa\footnote{Jacob, M. C. (2006). \textit{The Origins of Freemasonry: Facts and Fictions}. Filadelfia: University of Pennsylvania Press, p. 89.}.
+
+La tercera parte, titulada "Reglas Generales", contiene 39 artículos de carácter administrativo y procedimental, compilados inicialmente por George Payne en 1720 y revisados por Anderson. Estas reglas abordan cuestiones como la estructura de la Gran Logia, la organización de las logias particulares, los procedimientos para la admisión de nuevos miembros, la resolución de conflictos, y las ceremonias y festividades masónicas. Aunque de carácter más técnico que las secciones anteriores, estas Reglas revelan también importantes principios organizativos, como el gobierno representativo, la toma de decisiones por mayoría, y la jurisdicción territorial\footnote{Hamill, J. (1986). \textit{The Craft: A History of English Freemasonry}. Londres: Crucible, p. 47.}.
+
+Finalmente, la cuarta parte, titulada "Alcance", describe el procedimiento para constituir una nueva logia, detallando el ritual y las fórmulas utilizadas. Esta sección, junto con algunas referencias dispersas en el resto del documento, proporciona valiosas pistas sobre el ritual masónico de principios del siglo XVIII, aunque de manera deliberadamente velada para preservar el secreto masónico.
+
+El documento se completa con varios apéndices, entre los que destacan los "Himnos" masónicos (el del Maestro, el de los Vigilantes, el de los Compañeros y el de los Aprendices), compuestos por Anderson y otros autores, que ofrecen versiones versificadas de la historia masónica y exaltaciones de las virtudes de la fraternidad.
+
+En conjunto, las \textit{Constituciones} ofrecen una visión integral de la masonería como institución, abarcando su mitología fundacional, sus principios éticos, su estructura organizativa y sus procedimientos rituales. Como señala Langlet, "las Constituciones de Anderson no son simplemente un reglamento, sino una verdadera carta fundacional que define la identidad, la misión y el funcionamiento de la masonería moderna"\footnote{Langlet, P. (2009). \textit{Les textes fondateurs de la franc-maçonnerie}. París: Dervy, p. 67.}.
+
+\chapter{El texto de las Constituciones}
+
+\ornline
+\vspace{1cm}
+
+\epigraph{\textit{``La Masonería se convierte en el Centro de Unión y el medio de conciliar verdadera Fraternidad entre personas que hubieran permanecido perpetuamente distanciadas.''}}{--- Constituciones de Anderson, 1723}
+
+\lettrine[lines=3, lhang=0.1, loversize=0.1]{\textcolor{borgoña}{A}}{} continuación presentamos el texto completo de las \textit{Constituciones de Anderson} de 1723, en su traducción al español, acompañado de notas críticas que contextualizan, aclaran y analizan los aspectos más relevantes del documento. Para esta edición, hemos tomado como base la versión original inglesa, cotejándola con las traducciones históricas disponibles en español y con las versiones críticas más autorizadas en diversos idiomas.
+
+El texto se divide en sus cuatro secciones originales: la parte histórica (de la que ofrecemos una selección representativa de pasajes), los Deberes u Obligaciones (reproducidos íntegramente), las Regulaciones Generales (en su mayoría) y el procedimiento para la constitución de nuevas logias. Hemos mantenido la estructura y estilo del original, adaptando la puntuación y ortografía a las normas contemporáneas del español, pero preservando el sabor arcaizante del texto cuando resulta significativo para su comprensión histórica.
+
+\manuscritosection{Dedicatoria}
+
+\lettrine[lines=3, lhang=0.1, loversize=0.1]{\textcolor{dorado}{S}}{EÑOR:} Por Orden de Su Gracia el duque de Wharton, actual justamente Honorable GRAN MAESTRE de los \textit{Francmasones}, y como su \textit{Diputado}, humildemente dedico a Vuestra Gracia este Libro de las \textit{Constituciones} de nuestra antigua \textit{Fraternidad}, en testimonio de vuestro honroso, prudente y vigilante desempeño del oficio de nuestro GRAN MAESTRE durante el pasado año.
+
+No necesito decir a \textit{Vuestra Gracia}, el trabajo que se tomó nuestro erudito AUTOR para compilar y codificar este Libro de los antiguos \textit{Archivos} y con cuánta escrupulosidad ha comparado y expuesto todo lo concerniente a la \textit{Historia} y a la \textit{Cronología}, a fin de que estas NUEVAS CONSTITUCIONES sean una justa y exacta descripción de la Masonería desde el principio del Mundo hasta la GRAN MAESTRÍA de Vuestra Gracia, conservando todo lo verdaderamente auténtico en las antiguas: porque complacerá la obra a todo Hermano que sepa que Vuestra Gracia la leyó y aprobó, y se imprime ahora para uso de las \textit{Logias}, después de aprobada por la \textit{Gran Logia} cuando Vuestra Gracia era GRAN MAESTRE. Todos los Hermanos recordarán el honor que les hizo Vuestra Gracia. Toda la \textit{Fraternidad} recordará siempre el honor que le habéis otorgado, así como vuestro celo por su Paz, Armonía y duradera Fraternidad, que nadie siente más intensamente que Mi Señor.
+
+De Vuestra Gracia reconocido, obediente servidor y fiel hermano
+
+J. T. DESAGULIERS
+
+\textit{Diputado del Gran Maestre}\footnote{La dedicatoria, firmada por Jean Théophile Désaguliers, está dirigida al duque de Montagu, Gran Maestre durante 1721-1722, bajo cuyo mandato se compilaron las \textit{Constituciones}, aunque se publicaron cuando ya era Gran Maestre el duque de Wharton (1722-1723). Esta peculiaridad refleja el complejo proceso de redacción y aprobación del documento, que llevó casi dos años.}
+
+\manuscritosection{La Constitución}
+
+\noindent Historia, Leyes, Deberes, Órdenes, Reglas y Usos de la justamente honorable FRATERNIDAD de los aceptados FRANCMASONES compilada de sus generales ARCHIVOS y fieles TRADICIONES de muchos siglos. Para leerla en la admisión de un NUEVO HERMANO por el Venerable o un Vigilante, o por algún otro Hermano a quien se le ordene leerla, como sigue:
+
+\lettrine[lines=3, lhang=0.1, loversize=0.1]{\textcolor{dorado}{A}}{dán}, nuestro primer Padre, creado a imagen de Dios, el \textit{Gran Arquitecto del Universo}, debió de tener escritas en su corazón las Ciencias Liberales, particularmente la \textit{Geometría}, porque aun después de la Caída, hallamos los Principios de ella en el corazón de su prole, los cuales, en el transcurso del tiempo, se expusieron en un conveniente Método de \textit{Proposiciones}, al observar las Leyes de la \textit{Proporción} inducidas de la \textit{Mecánica}. Así como las \textit{Artes Mecánicas} dieron ocasión a los entendidos para metodizar los elementos de \textit{Geometría}, así esta noble ciencia metodizada es el fundamento de todas las artes (particularmente de la \textit{Masonería} y la \textit{Arquitectura}) y la regla que las guía y realiza.\footnote{La narrativa histórica comienza, significativamente, con Adán, vinculando así la masonería directamente con la tradición bíblica. Anderson presenta la geometría como un conocimiento innato en el hombre, "escrito en su corazón", siguiendo una concepción neoplatónica del conocimiento como reminiscencia. La identificación de Dios como "Gran Arquitecto del Universo" refleja tanto la tradición bíblica como el deísmo ilustrado incipiente.}
+
+\vspace{0.5cm}
+
+[...]
+\vspace{0.5cm}
+
+\noindent Por lo tanto, la \textit{Ciencia} y el \textit{Arte} se transmitieron de edad en edad a distantes climas a pesar de la confusión de lenguas, que si bien engendró en los masones la facultad y antigua universal práctica de conversar sin hablar y de conocerse unos a otros a distancia, no fue obstáculo para el progreso de la \textit{Masonería} en cada país y la \textit{comunicación} de los masones en su diferente idioma nacional.\footnote{Este pasaje hace referencia al mito de la Torre de Babel, pero lo reinterpreta para explicar el origen de los signos y toques masónicos como medios de reconocimiento que trascienden las barreras lingüísticas. Es un ejemplo de cómo Anderson adapta la narrativa bíblica a las necesidades específicas de la tradición masónica.}
+
+\vspace{0.5cm}
+
+[...]
+\vspace{0.5cm}
+
+\noindent Pero ni el templo de Dagón ni las magníficas construcciones de \textit{Tiro} y \textit{Sidón} podían compararse con el ETERNO TEMPLO DE DIOS en Jerusalén, que para pasmo del mundo construyó en el corto lapso de \textit{siete años y seis meses}, por mandato divino, aquel sapientísimo varón y gloriosísimo rey de Israel, el \textit{Príncipe de la Paz y de la Arquitectura}, SALOMÓN (hijo de David, a quien se le negó el honor de la edificación por haberse manchado de sangre) y lo construyó sin que se oyera ruido de herramientas ni rumor de hombres, a pesar de que estaban empleados 3.600 sobrestantes o Maestros Masones para dirigir la obra bajo las instrucciones de Salomón, con 70.000 obreros para llevar cargas y 80.000 compañeros para que cortasen en el monte.\footnote{La construcción del Templo de Salomón ocupa un lugar central en la narrativa andersoniana, como momento culminante de la arquitectura antigua y modelo para toda la masonería posterior. Las cifras de trabajadores empleados siguen el relato bíblico de 1 Reyes y 2 Crónicas, pero la estructura jerárquica en tres niveles (Maestros, Compañeros y obreros) refleja ya la organización en tres grados característica de la masonería especulativa.}
+
+\vspace{0.5cm}
+
+[...]
+\vspace{0.5cm}
+
+\noindent La masonería, como señala Langlet, "las Constituciones de Anderson no son simplemente un reglamento, sino una verdadera carta fundacional que define la identidad, la misión y el funcionamiento de la masonería moderna.
+
+\manuscritosection{Deberes de un Francmasón}
+
+\noindent Entresacados de los antiguos documentos de \textit{Logias} del Continente y de las de \textit{Inglaterra, Escocia} e \textit{Irlanda}.
+
+\noindent Para el uso de las \textit{Logias} de \textit{Londres}, y leerlos en el acto de la recepción de los nuevos hermanos o cuando el Venerable lo considere oportuno.
+
+Puntos capitales
+\begin{enumerate}
+\item De Dios y de la Religión.
+\item Del Jefe del Estado y sus subordinados.
+\item De las Logias.
+\item De los Maestros, Vigilantes, Compañeros y Aprendices.
+\item De los trabajos del Taller.
+\item De la conducta:
+   \begin{enumerate}
+   \item En la Logia mientras está en trabajos.
+   \item Cuando cerrados los trabajos permanecen los hermanos en la Logia.
+   \item Cuando los hermanos tratan con un extranjero fuera de la Logia.
+   \item En presencia de extranjeros profanos.
+   \item En el hogar doméstico y en la vecindad.
+   \item Con un masón forastero.
+   \end{enumerate}
+\end{enumerate}
+
+\vspace{0.5cm}
+
+\noindent \textbf{1. De Dios y de la Religión}
+
+\noindent El Masón está obligado por su carácter a obedecer la ley moral, y si debidamente comprende el Arte, no será jamás un estúpido ateo ni un libertino irreligioso. Pero aunque en tiempos antiguos los masones estaban obligados a pertenecer a la religión dominante en su país, cualquiera que fuere, se considera hoy mucho más conveniente obligarlos tan sólo a profesar aquella religión que todo hombre acepta, dejando a cada uno libre en sus individuales opiniones; es decir, que han de ser hombres probos y rectos, de honor y honradez, cualquiera que sea el credo o denominación que los distinga. De esta suerte la Masonería es el \textit{Centro de Unión} y el medio de conciliar verdadera Fraternidad entre personas que hubieran permanecido perpetuamente distanciadas.\footnote{Este primer deber, y particularmente el párrafo citado, es quizás el más significativo y controvertido de las \textit{Constituciones}. Al establecer que los masones sólo están obligados a profesar "aquella religión que todo hombre acepta", Anderson establece un principio de tolerancia religiosa inusual para su época. La formulación es deliberadamente ambigua: para algunos, esta "religión universal" se refiere a un cristianismo esencial despojado de particularidades confesionales; para otros, representa un deísmo de inspiración ilustrada. En cualquier caso, establece la base para una fraternidad que trasciende las divisiones religiosas, particularmente agudas en la Inglaterra de principios del siglo XVIII. Es significativo que en la segunda edición de 1738, Anderson modifica este texto para enfatizar su carácter monoteísta, añadiendo la referencia a los masones como "verdaderos Noaquidas" (seguidores de las leyes de Noé).}
+
+\vspace{0.5cm}
+
+\noindent \textbf{2. Del Jefe del Estado y sus subordinados}
+
+\noindent El Masón ha de ser pacífico súbdito del Poder civil doquiera resida o trabaje, y nunca se ha de comprometer en conjuras y conspiraciones contra la paz y bienestar de la nación ni conducirse indebidamente con los agentes de la autoridad; porque como la Masonería recibió siempre mucho daño de la guerra, el derramamiento de sangre y el confusionismo, los antiguos reyes y príncipes estuvieron siempre dispuestos a favorecer a los masones a causa de la quietud y lealtad con que prácticamente respondían a las sofisterías de sus adversarios, y fomentaban el honor de la Fraternidad que siempre floreció en tiempo de paz.
+
+\noindent Así que si un hermano se rebela contra el Estado, no se le ha de apoyar en su rebelión, aunque se le compadezca por tal desgracia; y si no está convicto de ningún crimen, aunque la leal Fraternidad deba condenar la rebelión y no dar al Gobierno el menor motivo de recelo ni asomo de fundamento sobre el particular, no podrán expulsarlo de la Logia y su relación con ella permanece incólume.\footnote{Este segundo deber establece el principio de lealtad al orden político establecido, pero con un matiz significativo: aunque condena la rebelión, establece que un hermano rebelde no debe ser expulsado de la Logia. Este pasaje ha sido interpretado como un compromiso entre la lealtad debida a la dinastía hannoveriana y la presencia en las logias inglesas de simpatizantes jacobitas (partidarios de la restauración de los Estuardo). Como señala Prescott, "la formulación busca un equilibrio entre la exigencia de lealtad política y la preservación de la armonía fraternal en un contexto políticamente dividido".}
+
+\vspace{0.5cm}
+
+\noindent \textbf{3. De las Logias}
+
+\noindent La Logia es el lugar en donde los masones se reúnen y trabajan. De aquí que a una asamblea o reunión de masones regularmente organizada se le llame Logia, y cada hermano debe pertenecer a una y sujetarse al reglamento de ella, al propio tiempo que a las Reglas Generales. Una Logia puede ser particular o general, lo que se entenderá mejor asistiendo a ellas, y por el reglamento de la Logia general o Gran Logia que se acompaña. En tiempos pasados ningún Maestro ni Compañero podía faltar a la Logia, especialmente si se le convocaba, sin incurrir en severa censura, hasta que el Venerable y los Vigilantes consideraron que a veces no podían asistir.
+
+\noindent Los individuos admitidos como miembros de una Logia han de ser honrados, de buenas costumbres, libres, de edad discretamente madura, sin tacha de inmoralidad ni mal ejemplo. 
+
+\vspace{0.5cm}
+
+\noindent \textbf{4. De los Maestros, Vigilantes, Compañeros y Aprendices}
+
+\noindent Toda preferencia entre los masones ha de fundarse únicamente en la valía y mérito personal, a fin de que los Señores estén bien servidos y no tengan de qué avergonzarse los hermanos ni haya motivo de despreciar el \textit{Arte Real}. Por lo tanto, los Venerables y Vigilantes no se elegirán por su antigüedad, sino por su mérito. Es imposible explicar estas cosas por escrito, y cada hermano debe estar en su puesto, y aprenderlas de la manera peculiar a la Fraternidad. Pero los candidatos pueden saber que ningún Maestro ha de tomar Aprendiz a menos que tenga suficiente tarea en que emplearlo, y que el Aprendiz sea un cumplido joven sin mutilación ni defecto en su cuerpo que le imposibilite para aprender el Arte, servir al Señor de su Maestro, ser recibido hermano y más tarde ascender a Compañero después de servir el número de años que se acostumbra en el país. Ha de pertenecer a familia honrada, y cuando reúna otras cualidades puede tener la honra de ser \textit{Vigilante}, y después Venerable de la Logia y Gran Vigilante y al fin Gran Maestre de todas las Logias, según sus merecimientos.
+
+\noindent Ningún hermano podrá ser Vigilante hasta que haya pasado del grado de Compañero, ni Venerable hasta que haya actuado de Vigilante ni Gran Vigilante si no ha sido Venerable de una Logia ni Gran Maestre a menos que haya pasado del grado de Compañero antes de su elección; pero ha de ser también noble de nacimiento o caballero de buena estirpe o eminente erudito o hábil arquitecto u otro artífice de honrada familia y que goce de buena opinión por su mérito en el seno de las Logias. Y para el mejor, más fácil y más honroso desempeño de su cargo, el Gran Maestre está facultado para nombrar a su Diputado, que debe ser entonces o ha de haber sido Venerable de una Logia, y tiene el derecho de actuar como Gran Maestre en delegación escrita en ausencia del titular.\footnote{Este cuarto deber establece dos principios fundamentales de la organización masónica: la meritocracia ("toda preferencia entre los masones ha de fundarse únicamente en la valía y mérito personal") y la estructura jerárquica en grados (Aprendiz, Compañero, Maestro) con sus correspondientes cargos (Vigilante, Venerable, Gran Maestro). Sin embargo, la meritocracia aparece matizada por la exigencia de que el Gran Maestro sea "noble de nacimiento o caballero de buena estirpe", reflejando la ambivalencia de una institución que, si bien aspiraba a trascender las jerarquías sociales, seguía operando en un contexto social fuertemente estratificado.}
+
+\noindent Todos los hermanos han de obedecer con humildad, reverencia, amor y celo a los Dignatarios y Oficiales de la Gran Logia en sus respectivas categorías.
+
+\vspace{0.5cm}
+
+\noindent \textbf{5. De los Trabajos}
+
+\noindent Todos los masones deben trabajar honradamente en los días laborables a fin de que puedan pasar decorosamente los días festivos. Se observará el calendario civil señalado por la ley del país o confirmado por la costumbre.
+
+\noindent El Compañero más experto será elegido o nombrado Maestro o Inspector de la obra del Señor, y le llamarán Maestro los que trabajen a sus órdenes. Los obreros se abstendrán de proferir malas palabras y de sacar motes ni llamar por apodo a los demás obreros, sino que los llamarán con las denominaciones de \textit{hermano} o \textit{compañero} y se portarán cortésmente dentro y fuera de la Logia.
+
+\noindent El Maestro, seguro de su habilidad, emprenderá la obra del \textit{Señor} tan razonablemente como sea posible y considerará los intereses de la obra como si fuesen propios, no dando a ningún obrero mayor salario del que realmente merezca. Tanto el Maestro como los obreros que reciban su justo salario han de ser fieles al \textit{Señor} cuyo trabajo han de efectuar honradamente tanto a destajo como a jornal; pero no harán a destajo la obra que por costumbre se haya hecho siempre a jornal.
+
+\noindent Ninguno manifestará envidia por la prosperidad de un hermano ni le suplantará ni le quitará de su labor aunque se crea capaz de terminarla, porque nadie puede acabar la obra de otro con tanto provecho para el \textit{Señor} a menos que esté perfectamente enterado de los proyectos y trazas del que la comenzó. Cuando un Compañero es elegido Vigilante de la obra bajo la dirección del Maestro, debe ser fiel al Maestro y a los Compañeros, y en ausencia del Maestro vigilará cuidadosamente la obra en servicio del \textit{Señor} y sus hermanos le obedecerán.
+
+\noindent Todos los obreros recibirán humildemente su salario sin murmurar ni amotinarse, y no abandonarán al Maestro hasta que esté terminada la obra.
+
+\noindent Al hermano joven se le enseñará a no desperdiciar material por falta de discernimiento, y a que acreciente y continúe el amor fraternal.
+
+\noindent Todos los útiles usados en los trabajos han de estar aprobados por la Gran Logia.
+
+\noindent A ningún labrador se le empleará en obra propia de Masonería ni los masones libres trabajarán con los que no lo sean a menos que haya urgente necesidad, ni los Maestros enseñarán a profanos, sino tan sólo a los masones aceptados.\footnote{Este quinto deber, a diferencia de los anteriores, mantiene un lenguaje aparentemente operativo, refiriéndose a aspectos concretos del trabajo en la construcción. Sin embargo, para la época en que se redactaron las Constituciones, la mayoría de los miembros de la Gran Logia de Londres ya no eran constructores profesionales, por lo que estas prescripciones deben entenderse en un sentido al menos parcialmente metafórico. La distinción entre trabajo "a destajo" y "a jornal", la prohibición de suplantar a otro en su obra, y la instrucción de "no desperdiciar material" adquieren así un significado moral y simbólico, más allá de su sentido literal operativo.}
+
+\vspace{0.5cm}
+
+\noindent \textbf{6. De la Conducta}
+
+\vspace{0.3cm}
+\noindent \textbf{1. \textit{En la Logia durante los trabajos}}
+
+\noindent No se han de formar corrillos ni se han de tener conversaciones secretas sin permiso del Venerable, ni se ha de hablar de cosas impertinentes o indecorosas, ni interrumpir al Venerable o a los Vigilantes ni a ningún hermano que hable con el Venerable. Tampoco se expresará el masón en términos jocosos o burlescos cuando la Logia esté tratando una cuestión grave y solemne ni usará de lenguaje inconveniente bajo ningún pretexto, sino que tributará la debida reverencia y veneración al Maestro, Vigilantes y obreros.
+
+\noindent Si se plantea alguna querella, el hermano culpable quedará sujeto al juicio y determinación de la Logia, cuyos miembros son los propios y competentes jueces de tales controversias (a menos que el acusado apele a la Gran Logia), excepto cuando se hubiere de retrasar por ello la obra del \textit{Señor}, en cual caso puede nombrarse una comisión particular; pero nunca se llevará a la jurisdicción civil una cuestión puramente masónica, sin absoluta necesidad reconocida por la Logia.
+
+\vspace{0.3cm}
+\noindent \textbf{2. \textit{Cuando cerrados los trabajos, permanecen los hermanos en la Logia}}
+
+\noindent Se permiten inocentes jovialidades según el ingenio de cada cual, pero evitando todo exceso en comida o bebida ni obligando a nadie a que coma o beba más allá de su inclinación, ni estorbando que se marche cuando le convenga. Tampoco se ha de decir ni hacer nada ofensivo ni que arriesgue impedir la libre conversación, porque estropearía nuestra armonía y desbarataría nuestros laudables propósitos. Por lo tanto, no se habrán de promover disputas ni discusiones en el recinto de la Logia y mucho menos contiendas sobre religión, nacionalidades y formas de Gobierno, pues como masones sólo pertenecemos a la religión universal antes citada y también somos de todas las naciones, razas y lenguas, y nos declaramos contra toda política, que nunca condujo ni conducirá al bien de la Logia. Este Deber se ha mantenido y observado siempre estrictamente; pero especialmente desde la Reforma en Britania y la secesión de la iglesia romana.\footnote{Este pasaje, con su prohibición de discusiones sobre "religión, nacionalidades y formas de Gobierno" dentro de la Logia, establece un principio de neutralidad política y religiosa que sería característico de la masonería anglosajona. La referencia a que este deber se ha observado "especialmente desde la Reforma en Britania y la secesión de la iglesia romana" sugiere que la prohibición está motivada por las tensiones religiosas post-Reforma, un tema especialmente sensible en la Inglaterra de principios del siglo XVIII, donde las luchas entre anglicanos, católicos y disidentes protestantes seguían vivas.}
+
+\vspace{0.3cm}
+\noindent \textbf{3. \textit{Cuando se encuentran hermanos, pero no en una Logia y sin la presencia de profanos}}
+
+\noindent Se saludarán cortésmente, según las instrucciones recibidas, y se llamarán uno a otro \textit{hermano}, dándose mutuos informes respecto a lo que consideren necesario, pero sin reparos fisgones en la indumentaria ni abusar uno de otro ni faltar al respeto debido a todo hermano y aun a los profanos. Porque aunque todos los masones son hermanos sobre el mismo nivel, la Masonería no recibe honor de quien en ella ingresa, sino que más bien le honra, sobre todo si ha merecido bien de la Fraternidad, por lo que debe honrar a quien honor se deba, y evitar los modales groseros.
+
+\vspace{0.3cm}
+\noindent \textbf{4. \textit{En presencia de profanos}}
+
+\noindent Será muy cauto en palabras y comportamiento, a fin de que el más sagaz profano no logre descubrir ni penetrar lo que no conviene revelar; y a veces será preciso dar otro giro a la conversación, y proceder prudentemente en honor de la venerable Fraternidad.
+
+\vspace{0.3cm}
+\noindent \textbf{5. \textit{En el hogar doméstico y en la vecindad}}
+
+\noindent Se portará cual corresponde a un varón recto y prudente, sin dar a conocer a los parientes, amigos y vecinos, nada de lo que se refiera a la Logia, etc., sino que consultará prudentemente su propio honor y el de la \textit{antigua Fraternidad}, por razones que no conviene mencionar aquí. También ha de tener en cuenta su salud, a fin de no seguir en conversación hasta muy tarde ni alejarse mucho del hogar doméstico luego de cerrados los trabajos de la Logia, y evitar las comilonas y las borracheras, con olvido y daño de la familia e incapacidad personal para el trabajo.
+
+\vspace{0.3cm}
+\noindent \textbf{6. \textit{Respecto a un masón forastero}}
+
+\noindent Se le observará prudentemente y se aconseja la prudencia, a fin de no ser víctima de un impostor, a quien se habrá de rechazar despectivamente con ludibrio, cuidando de no darle ni el más leve indicio de conocimiento.
+
+\noindent Pero si resulta ser un verdadero y genuino hermano, se le respetará en consecuencia; y si está necesitado, se le debe auxiliar en cuanto sea posible o proporcionarle un buen camino de remedio. Si hay manera fácil, darle ocupación o recomendarle a quien se la pueda dar. Pero nadie está obligado a más de lo que consientan sus posibilidades; sólo se exige preferir a un masón en vez de a un profano si ambos se hallan en las mismas circunstancias.
+
+\noindent Finalmente, el masón ha de cumplir todos estos Deberes y todos los que por otro medio se le comuniquen. Ha de cultivar el amor fraternal, fundamento, clave, cimiento y gloria de esta antigua Fraternidad, evitando toda disputa, discordia, altercado, murmuración y calumnia, sin permitir que otros calumnien a un honrado hermano, a quien defenderá con todo ardor como si de su propia honra y seguridad se tratase. Y si algún hermano injuriase a otro, deberá el que se considere injuriado recurrir a su propia Logia o a la del injuriador, y en caso necesario apelar a la Gran Logia en su reunión trimestral, y de ésta a la reunión anual, como fué antigua y loable conducta de nuestros antepasados en todas las naciones. Nunca se recurrirá a los tribunales civiles sino cuando no haya medio de dirimir de otro modo la cuestión. Se ha de escuchar pacientemente el honrado y amistoso consejo de los Maestros y Compañeros contrario a litigar civilmente con profanos o al menos que inciten a actuar rápidamente en todo proceso, a fin de dar preferencia con mayor celo y éxito a los asuntos masónicos. Pero respecto a los litigios con masones, los Maestros deben ofrecer amablemente su mediación, a la que deberán someterse los hermanos contendientes, y si esta sumisión es impracticable, proseguirán sin ira ni rencor (pero no por los tribunales profanos), sin decir ni hacer nada en contra del amor fraternal; y los buenos oficios se han de renovar y continuar, a fin de que todos vean la benigna influencia de la Masonería, como todo verdadero masón la experimentó desde el principio del mundo y la seguirá experimentando hasta el fin de los tiempos. Amén.\footnote{La conclusión de los Deberes enfatiza la fraternidad y la armonía como valores supremos, y establece un sistema interno de resolución de conflictos para evitar recurrir a los "tribunales profanos". Esta internalización de la justicia, característica de muchas instituciones del Antiguo Régimen, refleja la aspiración de la masonería a constituirse como una sociedad dentro de la sociedad, con sus propias normas y mecanismos de autorregulación.}
+
+\vspace{0.5cm}
+
+\manuscritosection{Regulaciones generales}
+
+\noindent Compiladas primeramente por Mr. George Payne, el año 1720, cuando era Gran Maestre, y aprobadas por la Gran Logia el día de San Juan Bautista del año 1721, en el Salón \textit{Stationer} de Londres, cuando el nobilísimo príncipe Juan, duque de Montagu fué elegido por unanimidad Gran Maestre para el año siguiente, y nombró Diputado a John Beal M. D. y la Gran Logia eligió Grandes Vigilantes a Mr. Josiah Villeneau y Mr. Thomas Morris, jun., y ahora, por mandato de nuestro digno y venerable Gran Maestre Montagu, el autor de este libro las ha cotejado con los antiguos documentos e inmemoriales usos de la Fraternidad y las ha compilado en este nuevo Método con varias adecuadas explicaciones para el uso de las Logias de Londres, Westminster y todo el país.
+
+\vspace{0.3cm}
